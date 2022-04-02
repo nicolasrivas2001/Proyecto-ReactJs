@@ -1,0 +1,326 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    header{
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 0px 5px 3px rgba(0,0,0,.1);
+        z-index: 1;
+        position: absolute;
+        top:0;
+        .contenedor-logo{
+            width: 6%;
+            #img-logo{
+                width: 80%;
+            }
+        }
+        ul{
+            padding-top: 10px;
+            position: relative;
+            top: 5px;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                font-size: 19px;
+                list-style: none;
+                margin-right: 25px;
+                color: black;
+                &:hover{
+                    color: brown;
+                }
+            }
+            li{
+                font-size: 19px;
+                list-style: none;
+                margin-right: 25px;
+                cursor: pointer;
+                &:hover{
+                    color: brown;
+                }
+            }
+        }
+        .contenedor-carrito{
+            display: flex;
+            justify-content: flex-end;
+                .item-carrito{
+                    img{
+                        width: 100px;
+                        border-radius: 10px;
+                    }
+                }
+            
+            .btn-primary{
+               img{
+                   width: 50px;
+               }
+            }
+            #btn-carrito{
+                display: none;
+            }
+            #img-carrito{
+                width: 20%;
+                img{
+                    width: 50%;
+                }
+            }
+        }
+        .itemlistconteiner{
+            background-color: white;
+            font-size: 40px;
+        }
+    }
+    .fondo-home{
+        width: 100%;
+    }
+    .ContenedorPromos{
+        background-color: black;
+        .contenedor-fondo{
+            display: flex;
+            justify-content: center;
+            .fondo-promo{
+                margin: 30px;
+                width: 80%;
+                border-radius: 10px;
+            }
+        }
+        h2{
+            padding: 30px;
+            margin: 30px;
+            color: white;
+            font-size: 80px;
+            position: absolute;
+            top: 60px;
+            right: 230px;
+            box-shadow: 20px 20px 20px 20px rgba(0,0,0,.8);
+        }
+        h3{
+            padding: 30px;
+            margin: 30px;
+            color: white;
+            font-size: 80px;
+            position: absolute;
+            top: 60px;
+            right: 310px;
+            box-shadow: 20px 20px 20px 20px rgba(0,0,0,.8);
+        }
+        .Promos{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+            top: -50px;
+            .producto{
+                background-color: white;
+                width: 25%;
+                box-shadow: 5px 5px 5px 5px rgba(0,0,0,.6);
+                padding-bottom: 20px;
+                margin-left: 10px;
+                border-radius: 10px;
+                &:hover{
+                    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+                }
+                div{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 90%;
+                        margin: 10px;
+                        border-radius: 10px;
+                    }
+                    
+                }
+                .nombre{
+                    font-family: 'Nunito Sans', sans-serif;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 30px;
+                }
+                .precio{
+                    font-family: 'Nunito Sans', sans-serif;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 20px;
+                }
+                .agregar-carrito{
+                    .cantidad{
+                        font-size: 20px;
+                    }
+                    .boton-agregar-carrito{
+                        font-size: 18px;
+                        &:hover{
+                            background-color: rgb(175, 68, 68);
+                        }
+                    }
+                }
+                #agregaralcarrito{
+                    font-size: 25px;
+                    display: flex;
+                    justify-content: center;
+                    width: 70%;
+                    padding: 8px;
+                    color: white;
+                    border-radius: 30px;
+                    background-color: rgb(112, 31, 31);
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgb(175, 68, 68);
+                    }
+                }
+            }
+        }
+    }
+    .conteinter-destacados{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .producto{
+            background-color: white;
+                width: 25%;
+                box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+                padding-bottom: 20px;
+                margin-left: 10px;
+                border-radius: 10px;
+                &:hover{
+                    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+                }
+            div{
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 90%;
+                    margin: 10px;
+                    border-radius: 10px;
+                }
+                p{
+                    font-family: 'Nunito Sans', sans-serif;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin: 10px;
+                    font-size: 18px;
+                }
+                
+            }
+            #agregaralcarrito{
+                display: flex;
+                justify-content: center;
+                width: 70%;
+                padding: 8px;
+                color: white;
+                border-radius: 30px;
+                background-color: rgb(112, 31, 31);
+                cursor: pointer;
+                &:hover{
+                    background-color: rgb(175, 68, 68);
+                }
+            }
+        }
+    }
+    .lista-carrito{
+        width: 20%;
+       div{
+           div{
+               img{
+                   width: 100%;
+               }
+           }
+       }
+    }
+    .numero-carrito{
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid;
+        font-size: 20px;
+    }
+
+    .producto{
+        .agregar-carrito{
+            display: flex;
+            flex-direction: column;
+            .cantidad{
+                display: flex;
+                flex-direction: row;
+                div{
+                    margin: 10px;
+                }
+            }
+            div{
+                .boton-agregar-carrito{
+                    width: 50%;
+                    color: white;
+                    font-weight: 400;
+                    background-color: rgb(102, 31, 31);
+                    border-radius: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+}
+.offcanvas-body{
+    .item-carrito{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        div{
+            text-align: center;
+            padding: 10px;
+            .nombre{
+                font-size: 20px;
+            }
+            .precio{
+                font-size: 20px;
+            }
+        }
+        .cantidad{
+            width: 20%;
+            padding-left: 40px;
+            display: flex;
+            align-items: center;
+            p{
+                padding: 10px;
+                border: 1px solid;
+                border-radius: 10px;
+            }
+        }
+    }
+    .total{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        p{
+            font-size: 20px;
+        }
+    }
+    .finalizar-compra{
+        p{
+            cursor: pointer;
+            background-color: rgb(102, 31, 31);
+            font-size: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            padding: 3px;
+            &:hover{
+                background-color: rgb(175, 68, 68);
+            }
+        }
+    }
+}

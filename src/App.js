@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { NavBar } from './Componentes/NavBar';
+import { Home } from './Componentes/Home';
+import React from 'react';
+import {CartProvider} from "./Componentes/Context";
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import { Promos } from './Componentes/Promos/Promos';
+import { Piezas } from './Componentes/Combos/Piezas';
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet"></link>
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <CartProvider>
+      <BrowserRouter>
+      <NavBar></NavBar>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/Promos' element={<Promos/>}></Route>
+        <Route path='/:piezas' element={<Piezas/>}></Route>
+      </Routes>
+    </BrowserRouter>
+    </CartProvider>
   );
 }
 
