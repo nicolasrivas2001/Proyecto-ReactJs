@@ -19,12 +19,11 @@ export const Count=(props)=>{
         <div className="agregar-carrito">
             <div className="cantidad">
                 <div onClick={()=>Decrementar(count)}>-</div>
-                <div>{count}</div>
+                <div className="count">{count}</div>
                 <div onClick={()=>Incrementar(count)}>+</div>
             </div>
             <div>
                 <div className="boton-agregar-carrito" onClick={()=>addItem(count,{imagen:props.imagen,nombre:props.nombre,precio:props.precio,cantidad:count},precio*count)}>Agregar al Carrito</div>
-                {console.log(cartItems)}
             </div>
         </div>
     )

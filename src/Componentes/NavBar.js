@@ -13,7 +13,7 @@ export const NavBar=()=>{
                 <Link to="/">Inicio</Link>
                 <Link to="/promos">Promos</Link>
                 <Link to="/piezas">Piezas</Link>
-                <li>Poke Salads</li>
+                <Link to="/poke-salads">Poke Salads</Link>
             </ul>
             <CartWidget></CartWidget>
         </header>

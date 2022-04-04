@@ -228,6 +228,23 @@ body .ContenedorPromos .Promos .producto .precio {
   font-size: 20px;
 }
 
+body .ContenedorPromos .Promos .producto .contenedor-ver-mas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .ContenedorPromos .Promos .producto .contenedor-ver-mas .ver-mas {
+  font: 20px;
+  border-radius: 10px;
+  width: 50%;
+  color: white;
+  background-color: #771c2e;
+}
+
 body .ContenedorPromos .Promos .producto .agregar-carrito .cantidad {
   font-size: 20px;
 }
@@ -344,13 +361,20 @@ body .lista-carrito div div img {
 }
 
 body .numero-carrito {
+  position: absolute;
+  top: 7%;
+  right: 0%;
+  width: 20px;
   background-color: white;
   border-radius: 10px;
   border: 1px solid;
   font-size: 20px;
+  z-index: 1;
+  text-align: center;
 }
 
 body .producto .agregar-carrito {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,6 +407,104 @@ body .producto .agregar-carrito div .boton-agregar-carrito {
   cursor: pointer;
 }
 
+body .Footer {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .Footer div {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+body .Footer div ul li {
+  list-style: none;
+  font-size: 20px;
+}
+
+.contenedor-detalle {
+  background-color: black;
+  padding: 160px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-detalle .detalle {
+  font-size: 20px;
+  color: white;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-detalle .detalle .imagen img {
+  margin-right: 40px;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.contenedor-detalle .detalle .nombre {
+  font-size: 50px;
+}
+
+.contenedor-detalle .detalle .agregar-carrito .cantidad {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-detalle .detalle .agregar-carrito .cantidad .count {
+  padding: 5px;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.contenedor-detalle .detalle .agregar-carrito .cantidad div {
+  margin: 10px;
+}
+
+.contenedor-detalle .detalle .agregar-carrito .boton-agregar-carrito {
+  width: 200px;
+  background-color: #682121;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contenedor-detalle .detalle .agregar-carrito .boton-agregar-carrito:hover {
+  background-color: #9c3636;
+}
+
+.contenedor-detalle .detalle .contenedor-datos {
+  text-align: center;
+}
+
+.contenedor-detalle .detalle .contenedor-datos div {
+  margin-top: 10px;
+}
+
 .offcanvas-body .item-carrito {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,6 +514,10 @@ body .producto .agregar-carrito div .boton-agregar-carrito {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 20px;
+}
+
+.offcanvas-body .item-carrito .img {
+  width: 38%;
 }
 
 .offcanvas-body .item-carrito div {
@@ -424,7 +550,7 @@ body .producto .agregar-carrito div .boton-agregar-carrito {
   border-radius: 10px;
 }
 
-.offcanvas-body .total {
+.offcanvas-body .contenedor-total .total {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,8 +560,19 @@ body .producto .agregar-carrito div .boton-agregar-carrito {
           justify-content: space-between;
 }
 
-.offcanvas-body .total p {
+.offcanvas-body .contenedor-total .total p {
   font-size: 20px;
+  text-decoration: none;
+}
+
+.offcanvas-body .contenedor-total .pagar {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .offcanvas-body .finalizar-compra p {
@@ -450,5 +587,37 @@ body .producto .agregar-carrito div .boton-agregar-carrito {
 
 .offcanvas-body .finalizar-compra p:hover {
   background-color: #af4444;
+}
+
+.contenedor-form {
+  color: white;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-form form {
+  font-size: 18px;
+  width: 60%;
+  margin: 100px;
+}
+
+.contenedor-form .contenedor-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-form .contenedor-submit button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 17px;
 }
 /*# sourceMappingURL=estilos.css.map */

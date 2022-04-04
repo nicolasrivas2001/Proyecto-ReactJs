@@ -4,7 +4,8 @@ import { Total } from "./Total"
 
 
 export const MostrarCarrito=()=>{
-    const {cartItems,eliminarItem}=useContext(CartContext)
+    const {cartItems,setCartItems}=useContext(CartContext)
+    const eliminar=(item)=>cartItems.filter(product=>product.id !== item.id)
     return(
         <div className="carrito-dropdown">
             {cartItems.length===0?
@@ -20,13 +21,14 @@ export const MostrarCarrito=()=>{
                 }
                 return(
                     <div className="item-carrito">
-                        <img src={i.imagen}></img>
+                        <img className="img" src={i.imagen}></img>
                         <div>
                             <div className="nombre">{i.nombre}</div>
                             <div className="precio">{i.precio}</div>
                         </div>
                         <div className="cantidad"><p>{i.cantidad}</p></div>
-                        <div onClick={eliminarItem(i.nombre)}><p>Borrar</p></div>
+                        {console.log(i)}
+                        <div onClick={eliminar(i)}><p>Borrar</p></div>
                         <div>
                             {/* <div onClick={()=>Incrementar(i[3])}>+</div>
                             <div>{count}</div>

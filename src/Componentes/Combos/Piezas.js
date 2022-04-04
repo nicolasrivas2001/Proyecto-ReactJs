@@ -6,7 +6,7 @@ import Geishas from "./Imagenes/geishas-salmon.jpg"
 import NewYorkPhila from "./Imagenes/newyork-philladelphia.jpg"
 import Nigiri from "./Imagenes/nigiri-salmon.jpg"
 import RollNewYork from "./Imagenes/roll-newyork.jpg"
-import { ItemListConteiner } from "../ItemListConteiner"
+import { ItemListCategoria } from "../ItemListPiezas"
 export const Piezas=()=>{
     return(
         <div className="ContenedorPromos">
@@ -14,7 +14,7 @@ export const Piezas=()=>{
         <img className="fondo-promo" src={FondoPiezas}></img>
         </div>
         <h3>Nuestras piezas</h3>
-        <ItemListConteiner></ItemListConteiner>
+        <ItemListCategoria categoria="piezas"></ItemListCategoria>
         {/* <div className="Promos">
         <Producto nombre="Poke Salad" imagen={Bologna} precio={450}></Producto>
             <Producto nombre="Alaska 40" imagen={Firenze} precio={500}></Producto>

@@ -1,16 +1,16 @@
 import { collection, getDocs } from "firebase/firestore"
 import { useContext, useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import db from "../services/firebase"
 import { ItemList } from "./ItemList"
 import { Loader } from "./Loader"
 import {CartContext} from "./Context" 
+import { Count } from "./Count"
 
-export const ItemListConteiner=()=>{
+export const ItemListConteiner=(props)=>{
     const {categoryId}=useParams()
-    console.log(categoryId)
+     
     const [Items,setItems]=useState([])
-    // const [prodFiltrados,setprodFiltrados]=useState([])
     const[load,setLoad]=useState(true)
     const {prodFilt,setProdFilt}=useContext(CartContext);
     const getData=async()=>{
@@ -29,14 +29,15 @@ export const ItemListConteiner=()=>{
 
     useEffect(()=>{
         getData();
-    },[categoryId])
+    });
 
         
         return(
             <>
-            {load?<Loader></Loader>:
+            <div className="ContenedorPromos">
             <ItemList></ItemList>
-            }
+            </div>
             </>
-        )   
+        )  
+
 }
