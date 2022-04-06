@@ -13,7 +13,6 @@ export const ItemListConteiner=()=>{
             const col=await getDocs(ItemsCollection)
             const result=col.docs.map((doc)=>doc={id:doc.id, ...doc.data()})
             setItems(result)
-            console.log(result)
             setProdFilt(Items.filter(e=>e.categoria==="destacados"))
         } catch (error) {
             console.warn("error",error)

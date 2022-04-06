@@ -7,7 +7,6 @@ export const CartProvider=({children})=>{
     const [ItemsPiezas,setItemsPiezas]=useState([]);
     const [cartItems,setCartItems]=useState([]);
     const [cartCount,setCount]=useState(0);
-    const [cantProd,setCantProd]=useState(0);
     const [total,setTotal]=useState(0);
 
     const [detailImagen,setDetailImagen]=useState([]);
@@ -71,6 +70,6 @@ export const CartProvider=({children})=>{
     
 
     return(
-        <CartContext.Provider value={{setProdFilt,prodFilt,cartCount,setCount,cartItems,setCartItems,addItem,cantProd,total,setTotal,setItemsPiezas,ItemsPiezas,setDetailImagen,setDetailNombre,setDetailPrecio,enviarAdetail,detailImagen,detailNombre,detailPrecio,eliminarItem}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{setProdFilt,prodFilt,cartCount,setCount,cartItems,setCartItems,addItem,total,setTotal,setItemsPiezas,ItemsPiezas,setDetailImagen,setDetailNombre,setDetailPrecio,enviarAdetail,detailImagen,detailNombre,detailPrecio,eliminarItem}}>{children}</CartContext.Provider>
     )
 }

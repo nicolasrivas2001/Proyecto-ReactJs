@@ -5,11 +5,11 @@ import { Total } from "./Total"
 
 export const MostrarCarrito=()=>{
     // const eliminarItem=(item)=>{
-    //     const CartItemActualizado=cartItems.filter(e=>e.nombre!==item)
-    //     setCartItems(CartItemActualizado)
+    // const CartItemActualizado=cartItems.filter(e=>e.nombre!==item)
+    // setCartItems(CartItemActualizado)
     // }
-    const {cartItems,setCartItems,eliminarItem}=useContext(CartContext)
-    const eliminar=(item)=>cartItems.filter(product=>product.id !== item.id)
+    const {cartItems,setCartItems}=useContext(CartContext)
+    // const eliminar=(item)=>cartItems.filter(product=>product.id !== item.id)
     return(
         <div className="carrito-dropdown">
             {cartItems.length===0?
@@ -31,8 +31,7 @@ export const MostrarCarrito=()=>{
                             <div className="precio">{`$`+i.precio}</div>
                         </div>
                         <div className="cantidad"><p>{i.cantidad}</p></div>
-                        {console.log(i)}
-                        <div className="borrar">X</div>
+                        <div className="borrar" >X</div>
                         <div>
                             {/* <div onClick={()=>Incrementar(i[3])}>+</div>
                             <div>{count}</div>

@@ -8,11 +8,15 @@ import { async } from "@firebase/util";
 
 
 export const Form=()=>{
-    const {cartItems,total}=useContext(CartContext);
+    const {cartItems,setcartItems,total,setCount}=useContext(CartContext);
     const sendOrder= async(e)=>{
+        console.log(e)
         e.preventDefault();
-        console.log(e.target[0].value)
-        let order = {
+        if(cartItems.length===0){
+            alert("No se agrego ningun producto al carrito")
+        }else{
+            console.log(e.target[0].value)
+            let order = {
             comprador:{
                 nombre:e.target[0].value,
                 apellido:e.target[1].value,
@@ -29,6 +33,9 @@ export const Form=()=>{
         const queryColecction=collection(db,"orders");
         console.log(order);
         const docRef= await addDoc(queryColecction,order);
+        }
+        setCount(0);
+        setcartItems([]);
 
     }
     return(
