@@ -533,9 +533,23 @@ body .Footer div ul li {
   font-size: 20px;
 }
 
+.offcanvas-body .item-carrito .borrar {
+  color: white;
+  background-color: #bb1313;
+  height: 40px;
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  position: relative;
+  top: -8px;
+}
+
 .offcanvas-body .item-carrito .cantidad {
   width: 20%;
-  padding-left: 40px;
+  padding-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

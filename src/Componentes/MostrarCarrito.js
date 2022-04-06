@@ -1,10 +1,14 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { CartContext } from "./Context"
 import { Total } from "./Total"
 
 
 export const MostrarCarrito=()=>{
-    const {cartItems,setCartItems}=useContext(CartContext)
+    // const eliminarItem=(item)=>{
+    //     const CartItemActualizado=cartItems.filter(e=>e.nombre!==item)
+    //     setCartItems(CartItemActualizado)
+    // }
+    const {cartItems,setCartItems,eliminarItem}=useContext(CartContext)
     const eliminar=(item)=>cartItems.filter(product=>product.id !== item.id)
     return(
         <div className="carrito-dropdown">
@@ -24,11 +28,11 @@ export const MostrarCarrito=()=>{
                         <img className="img" src={i.imagen}></img>
                         <div>
                             <div className="nombre">{i.nombre}</div>
-                            <div className="precio">{i.precio}</div>
+                            <div className="precio">{`$`+i.precio}</div>
                         </div>
                         <div className="cantidad"><p>{i.cantidad}</p></div>
                         {console.log(i)}
-                        <div onClick={eliminar(i)}><p>Borrar</p></div>
+                        <div className="borrar" onClick={eliminarItem(i)}>X</div>
                         <div>
                             {/* <div onClick={()=>Incrementar(i[3])}>+</div>
                             <div>{count}</div>
@@ -42,5 +46,8 @@ export const MostrarCarrito=()=>{
             }
             <Total></Total>
         </div>
+        
     )
+    
 }
+

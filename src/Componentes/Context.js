@@ -21,29 +21,30 @@ export const CartProvider=({children})=>{
     }
 
     const addItem=(amount,item,precio)=>{
-        // if (cartItems.some((product)=>product.id===item.id)){
-        //     const copy=[...cartItems];
-        //     const repeatItemIndex=cartItems.findIndex(
-        //         (product)=>product.id===item.id
-        //     );
-        //     copy[repeatItemIndex]={
-        //         ...copy[repeatItemIndex],
-        //         amount: copy[repeatItemIndex].amount+amount,
-        //     };
-        //     setCartItems(copy);
-        //     setCount((prev)=>prev+amount);
-        // }else{
-            
-        // }
-        setCartItems([...cartItems,{...item,amount}]);
-        setCount((prev)=>prev+amount);
+         if (cartItems.some((product)=>product.nombre===item.nombre)){
+             const copy=[...cartItems];
+             const repeatItemIndex=cartItems.findIndex(
+                 (product)=>product.nombre===item.nombre
+             );
+             copy[repeatItemIndex]={
+                 ...copy[repeatItemIndex],
+                 cantidad: copy[repeatItemIndex].cantidad+amount,
+             };
+             setCartItems(copy);
+             setCount((prev)=>prev+amount);
+         }else{
+            setCartItems([...cartItems,{...item,amount}]);
+            setCount((prev)=>prev+amount);
+         }
         setTotal((prev)=>prev+precio);
     }
 
 
    
     
-    // const eliminarItem=(item)=>{
+     const eliminarItem=(item)=>{
+         const CartItemActualizado=cartItems.filter(e=>e.nombre!==item.nombre)
+         setCartItems(CartItemActualizado);
     //     alert("Hola")
         //  setCartItems(cartItems.filter(product=>product.id !==item))
     //    let i=0;
@@ -66,10 +67,10 @@ export const CartProvider=({children})=>{
         //     }
         //     i++;
         // }
-    //  }
+     }
     
 
     return(
-        <CartContext.Provider value={{setProdFilt,prodFilt,cartCount,setCount,cartItems,setCartItems,addItem,cantProd,total,setTotal,setItemsPiezas,ItemsPiezas,setDetailImagen,setDetailNombre,setDetailPrecio,enviarAdetail,detailImagen,detailNombre,detailPrecio}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{setProdFilt,prodFilt,cartCount,setCount,cartItems,setCartItems,addItem,cantProd,total,setTotal,setItemsPiezas,ItemsPiezas,setDetailImagen,setDetailNombre,setDetailPrecio,enviarAdetail,detailImagen,detailNombre,detailPrecio,eliminarItem}}>{children}</CartContext.Provider>
     )
 }

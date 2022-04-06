@@ -2,12 +2,6 @@ import { CartContext } from "./Context"
 import { useContext } from "react"
 
 export const Form=()=>{
-    const {setCartItems,setTotal}=useContext(CartContext);
-    const finalizarCompra=()=>{
-        alert("Su compra se ha realizado con exito")
-        setCartItems([])
-        setTotal(0)
-    }
     return(
         <div className="contenedor-form">
             <form>
@@ -43,7 +37,7 @@ export const Form=()=>{
                     
                     
                     <div className="contenedor-submit">
-                    <button onClick={finalizarCompra} type="submit" class="btn btn-primary">Finalizar Compra</button>
+                    <button  type="submit" class="btn btn-primary">Finalizar Compra</button>
                     </div>
         </form>
         </div>

@@ -10,6 +10,8 @@ import { ItemListPiezas } from './Componentes/ItemListPiezas';
 import { ItemDetail } from './Componentes/ItemDetail';
 import { Form } from './Componentes/Form';
 import { PokeSalads } from './Componentes/PokeSalads';
+import { Footer } from './Componentes/Footer';
+import { Carrito } from './Componentes/Carrito';
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet"></link>
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         <Route path='/formulario' element={<Form/>}></Route>
         <Route path='/poke-salads' element={<PokeSalads/>}></Route>
       </Routes>
+    <Footer></Footer>
+    <Carrito></Carrito>
     </BrowserRouter>
     </CartProvider>
   )

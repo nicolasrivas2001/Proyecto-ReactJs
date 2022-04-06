@@ -7,12 +7,10 @@ import { Loader } from "./Loader"
 import {CartContext} from "./Context" 
 import { Count } from "./Count"
 
-export const ItemListConteiner=(props)=>{
-    const {categoryId}=useParams()
-     
+export const ItemListConteiner=()=>{
     const [Items,setItems]=useState([])
     const[load,setLoad]=useState(true)
-    const {prodFilt,setProdFilt}=useContext(CartContext);
+    const {prodFilt,setProdFilt,setProductos}=useContext(CartContext);
     const getData=async()=>{
         try {
             const ItemsCollection=collection(db,"Items")
@@ -20,7 +18,7 @@ export const ItemListConteiner=(props)=>{
             const result=col.docs.map((doc)=>doc={id:doc.id, ...doc.data()})
             setItems(result)
             console.log(result)
-            categoryId? setProdFilt(Items.filter(e=>e.categoria===categoryId)):setProdFilt(Items)
+            setProdFilt(Items.filter(e=>e.categoria==="destacados"))
             setLoad(false)
         } catch (error) {
             console.warn("error",error)

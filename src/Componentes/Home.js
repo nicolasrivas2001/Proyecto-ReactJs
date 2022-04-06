@@ -13,10 +13,8 @@ export const Home=()=>{
         <img className="fondo-home" src={Fondo}></img>
         
         <ItemListConteiner categoria="destacados"></ItemListConteiner>
-        
-        
         <Carrito></Carrito>
-        <Footer></Footer>
+    
         </>
     )
 }
