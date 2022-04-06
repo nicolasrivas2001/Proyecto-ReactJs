@@ -1,16 +1,12 @@
 import { collection, getDocs } from "firebase/firestore"
 import { useContext, useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
 import db from "../services/firebase"
 import { ItemList } from "./ItemList"
-import { Loader } from "./Loader"
 import {CartContext} from "./Context" 
-import { Count } from "./Count"
 
 export const ItemListConteiner=()=>{
     const [Items,setItems]=useState([])
-    const[load,setLoad]=useState(true)
-    const {prodFilt,setProdFilt,setProductos}=useContext(CartContext);
+    const {setProdFilt}=useContext(CartContext);
     const getData=async()=>{
         try {
             const ItemsCollection=collection(db,"Items")
@@ -19,7 +15,6 @@ export const ItemListConteiner=()=>{
             setItems(result)
             console.log(result)
             setProdFilt(Items.filter(e=>e.categoria==="destacados"))
-            setLoad(false)
         } catch (error) {
             console.warn("error",error)
         }

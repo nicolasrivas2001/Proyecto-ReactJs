@@ -5,8 +5,7 @@ import { Count } from "./Count"
 import { ItemDetail } from "./ItemDetail";
 
 export const Producto=(props)=>{
-    const nombre =props.nombre;
-    const {ItemsPiezas,setItemsPiezas,setDetailImagen,setDetailNombre,setDetailPrecio,enviarAdetail}=useContext(CartContext);
+    const {enviarAdetail}=useContext(CartContext);
     return(
         <>
         <div className="producto">

@@ -32,7 +32,7 @@ export const MostrarCarrito=()=>{
                         </div>
                         <div className="cantidad"><p>{i.cantidad}</p></div>
                         {console.log(i)}
-                        <div className="borrar" onClick={eliminarItem(i)}>X</div>
+                        <div className="borrar">X</div>
                         <div>
                             {/* <div onClick={()=>Incrementar(i[3])}>+</div>
                             <div>{count}</div>

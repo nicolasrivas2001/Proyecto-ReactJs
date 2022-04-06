@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import {CartContext} from "./Context" 
-import { Count } from "./Count";
 
 
 export const ItemList=()=>{
@@ -11,7 +10,6 @@ export const ItemList=()=>{
         prodFilt.length>0?
         prodFilt.map((i)=>{
         return(
-            
                 <div className="Promos">
                 <div className="producto">
                     <div>
@@ -24,7 +22,6 @@ export const ItemList=()=>{
                         </div></Link>
                 </div>
                 </div>
-            
         )
     })
     :
