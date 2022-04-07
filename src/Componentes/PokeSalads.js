@@ -1,5 +1,5 @@
 import { ItemListCategoria } from "./ItemListPiezas"
-import Fondo from "./fondo-promos.webp"
+import Fondo from "../Imagenes/fondo-promos.webp"
 
 export const PokeSalads=()=>{
     return(
@@ -7,7 +7,7 @@ export const PokeSalads=()=>{
         <div className="contenedor-fondo">
         <img className="fondo-promo" src={Fondo}></img>
         </div>
-        <h3>Our  Poke  Salads!</h3>
+        <h3>Our  Poke  Salads</h3>
         <ItemListCategoria categoria="poke salads"></ItemListCategoria>
         </div>
     )

@@ -4,7 +4,7 @@ import { Home } from './Componentes/Home';
 import React from 'react';
 import {CartProvider} from "./Componentes/Context";
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import { Piezas } from './Componentes/Combos/Piezas';
+import { Piezas } from './Componentes/Piezas';
 import { ItemDetail } from './Componentes/ItemDetail';
 import { Form } from './Componentes/Form';
 import { PokeSalads } from './Componentes/PokeSalads';
