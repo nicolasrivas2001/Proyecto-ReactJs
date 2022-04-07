@@ -379,6 +379,7 @@ body .numero-carrito {
   font-size: 20px;
   z-index: 1;
   text-align: center;
+  position: fixed;
 }
 
 body .producto .agregar-carrito {

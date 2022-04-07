@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react"
+import { Borrar } from "./Borrar"
 import { CartContext } from "./Context"
 import { Total } from "./Total"
 
@@ -31,7 +32,7 @@ export const MostrarCarrito=()=>{
                             <div className="precio">{`$`+i.precio}</div>
                         </div>
                         <div className="cantidad"><p>{i.cantidad}</p></div>
-                        <div className="borrar" >X</div>
+                        <Borrar item={i}></Borrar>
                         <div>
                             {/* <div onClick={()=>Incrementar(i[3])}>+</div>
                             <div>{count}</div>
