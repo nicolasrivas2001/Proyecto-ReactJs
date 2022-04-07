@@ -5,7 +5,6 @@ import {CartContext} from "./Context"
 
 export const ItemList=()=>{
     const {prodFilt,enviarAdetail}=useContext(CartContext);
-    console.log(prodFilt)
     return(
         prodFilt.length>0?
         prodFilt.map((i)=>{

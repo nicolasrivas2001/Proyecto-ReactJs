@@ -1,14 +1,16 @@
 import Fondo from "../Imagenes/fondo-home.webp";
-import { Carrito } from "./Carrito";
-import { ItemListConteiner } from "./ItemListConteiner";
+import { ItemListCategoria } from "./ItemListPiezas";
 
 
 export const Home=()=>{
     return(
-        <>
-        <img className="fondo-home" src={Fondo}></img>
-        <ItemListConteiner categoria="destacados"></ItemListConteiner>
-        <Carrito></Carrito>
-        </>
+        <div className="ContenedorPromos">
+        <div className="contenedor-fondo">
+            <img className="fondo-home" src={Fondo}></img>
+            <h3>Our Destacados</h3>
+        </div>
+        
+        <ItemListCategoria categoria="destacados"></ItemListCategoria>
+        </div>
     )
 }

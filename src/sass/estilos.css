@@ -20,11 +20,9 @@ body header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.4);
   z-index: 1;
-  position: absolute;
-  top: 0;
 }
 
 body header .contenedor-logo {
@@ -37,9 +35,10 @@ body header .contenedor-logo #img-logo {
 
 body header ul {
   padding-top: 10px;
+  padding-right: 30px;
   position: relative;
   top: 5px;
-  width: 80%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,9 +53,9 @@ body header ul {
 
 body header ul a {
   text-decoration: none;
-  font-size: 19px;
+  font-size: 20px;
   list-style: none;
-  margin-right: 25px;
+  margin-left: 40px;
   color: black;
 }
 
@@ -79,9 +78,18 @@ body header .contenedor-carrito {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+body header .contenedor-carrito .btn-primary {
+  border: white;
+  background-color: white;
 }
 
 body header .contenedor-carrito .item-carrito img {
@@ -146,12 +154,12 @@ body .ContenedorPromos h2 {
 }
 
 body .ContenedorPromos h3 {
-  padding: 30px;
+  padding: 40px;
   margin: 30px;
   color: white;
   font-size: 80px;
   position: absolute;
-  top: 60px;
+  top: 100px;
   right: 310px;
   -webkit-box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.8);
           box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.8);
@@ -171,7 +179,7 @@ body .ContenedorPromos .Promos {
           justify-content: center;
   margin-bottom: 20px;
   position: relative;
-  top: -50px;
+  top: -70px;
 }
 
 body .ContenedorPromos .Promos .producto {
