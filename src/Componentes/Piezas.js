@@ -6,7 +6,9 @@ export const Piezas=()=>{
         <div className="contenedor-fondo">
             <img className="fondo-promo" src={FondoPiezas}></img>
         </div>
-        <h3>Nuestras piezas</h3>
+        <div className="contenedor-titulo">
+            <h3>Nuestras piezas</h3>
+        </div>
         <ItemListCategoria categoria="piezas"></ItemListCategoria>
         </div>
     )

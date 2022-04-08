@@ -9,14 +9,15 @@ export const CartProvider=({children})=>{
     const [cartCount,setCount]=useState(0);
     const [total,setTotal]=useState(0);
 
-    const [detailImagen,setDetailImagen]=useState([]);
-    const [detailNombre,setDetailNombre]=useState([]);
-    const [detailPrecio,setDetailPrecio]=useState([]);
+    const [detailImagen,setDetailImagen]=useState("");
+    const [detailNombre,setDetailNombre]=useState("");
+    const [detailPrecio,setDetailPrecio]=useState("");
+
 
     const enviarAdetail=(imagen,nombre,precio)=>{
-        setDetailImagen(imagen)
-        setDetailNombre(nombre)
-        setDetailPrecio(precio)
+        setDetailImagen(imagen);
+        setDetailNombre(nombre);
+        setDetailPrecio(precio);
     }
 
     const addItem=(amount,item,precio)=>{

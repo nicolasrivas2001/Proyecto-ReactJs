@@ -7,7 +7,9 @@ export const PokeSalads=()=>{
         <div className="contenedor-fondo">
         <img className="fondo-promo" src={Fondo}></img>
         </div>
-        <h3>Our  Poke  Salads</h3>
+        <div className="contenedor-titulo">
+            <h3>Our  Poke  Salads</h3>
+        </div>
         <ItemListCategoria categoria="poke salads"></ItemListCategoria>
         </div>
     )

@@ -2,11 +2,12 @@ import { collection, getDocs } from "firebase/firestore"
 import { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import db from "../services/firebase"
+import { BotonDetail } from "./BotonDetail"
 import {CartContext} from "./Context" 
 
 
 export const ItemListCategoria=(props)=>{
-    const {ItemsPiezas,setItemsPiezas,enviarAdetail}=useContext(CartContext);
+    const {ItemsPiezas,setItemsPiezas,enviarAdetail,setDetailNombre,setDetailImagen,setDetailPrecio}=useContext(CartContext)
     const getData=async()=>{
         try {
             const ItemsCollection=collection(db,"Items")
@@ -38,9 +39,12 @@ export const ItemListCategoria=(props)=>{
                     <div className="nombre"><p>{i.nombre}</p></div>
                     <div className="precio"><p>{`$`+i.precio}</p></div>
                     
-                    <Link to="/detalle"><div className="contenedor-ver-mas">
-                    <div className="ver-mas" onClick={enviarAdetail(i.imagen,i.nombre,i.precio)}>Ver más</div>
-                        </div></Link>
+                    <Link to="/detalle">
+                        {/* <div className="contenedor-ver-mas">
+                            <div className="ver-mas" onClick={datosDetail(i.imagen,i.nombre,i.precio)}>Verr más</div>
+                        </div> */}
+                        <BotonDetail item={i}></BotonDetail>
+                    </Link>
                     
                 </div>
                 </div>

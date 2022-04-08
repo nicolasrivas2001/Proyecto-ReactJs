@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import {CartContext} from "./Context" 
-
+import {BotonDetail} from "./BotonDetail"
 
 export const ItemList=()=>{
     const {prodFilt,enviarAdetail}=useContext(CartContext);
@@ -17,7 +17,8 @@ export const ItemList=()=>{
                     <div className="nombre"><p>{i.nombre}</p></div>
                     <div className="precio"><p>{`$`+i.precio}</p></div>
                     <Link to="/detalle"><div className="contenedor-ver-mas">
-                    <div className="ver-mas" onClick={enviarAdetail(i.imagen,i.nombre,i.precio)}>Ver más</div>
+                    {/* <div className="ver-mas" onClick={enviarAdetail(i.imagen,i.nombre,i.precio)}>Ver más</div> */}
+                        <BotonDetail item={i}></BotonDetail>
                         </div></Link>
                 </div>
                 </div>

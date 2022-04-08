@@ -30,7 +30,7 @@ body header .contenedor-logo {
 }
 
 body header .contenedor-logo #img-logo {
-  width: 80%;
+  width: 60%;
 }
 
 body header ul {
@@ -49,11 +49,14 @@ body header ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body header ul a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   list-style: none;
   margin-left: 40px;
   color: black;
@@ -64,7 +67,6 @@ body header ul a:hover {
 }
 
 body header ul li {
-  font-size: 19px;
   list-style: none;
   margin-right: 25px;
   cursor: pointer;
@@ -141,26 +143,22 @@ body .ContenedorPromos .contenedor-fondo .fondo-promo {
   border-radius: 10px;
 }
 
-body .ContenedorPromos h2 {
-  padding: 30px;
-  margin: 30px;
-  color: white;
-  font-size: 80px;
-  position: absolute;
-  top: 60px;
-  right: 230px;
-  -webkit-box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.8);
-          box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.8);
+body .ContenedorPromos .contenedor-titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body .ContenedorPromos h3 {
+body .ContenedorPromos .contenedor-titulo h3 {
   padding: 40px;
   margin: 30px;
-  color: white;
-  font-size: 80px;
-  position: absolute;
-  top: 100px;
-  right: 310px;
+  color: #ffffff;
+  font-size: 90px;
+  position: relative;
+  top: -700px;
   -webkit-box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.8);
           box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.8);
 }
@@ -179,7 +177,7 @@ body .ContenedorPromos .Promos {
           justify-content: center;
   margin-bottom: 20px;
   position: relative;
-  top: -70px;
+  top: -280px;
 }
 
 body .ContenedorPromos .Promos .producto {

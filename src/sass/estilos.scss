@@ -17,7 +17,7 @@ body{
         .contenedor-logo{
             width: 6%;
             #img-logo{
-                width: 80%;
+                width: 60%;
             }
         }
         ul{
@@ -29,9 +29,10 @@ body{
             display: flex;
             flex-direction: row;
             justify-content: center;
+            align-items: center;
             a{
                 text-decoration: none;
-                font-size: 20px;
+                font-size: 25px;
                 list-style: none;
                 margin-left: 40px;
                 color: black;
@@ -40,7 +41,6 @@ body{
                 }
             }
             li{
-                font-size: 19px;
                 list-style: none;
                 margin-right: 25px;
                 cursor: pointer;
@@ -99,25 +99,18 @@ body{
                 border-radius: 10px;
             }
         }
-        h2{
-            padding: 30px;
-            margin: 30px;
-            color: white;
-            font-size: 80px;
-            position: absolute;
-            top: 60px;
-            right: 230px;
-            box-shadow: 20px 20px 20px 20px rgba(0,0,0,.8);
-        }
-        h3{
-            padding: 40px;
-            margin: 30px;
-            color: white;
-            font-size: 80px;
-            position: absolute;
-            top: 100px;
-            right: 310px;
-            box-shadow: 20px 20px 20px 20px rgba(0,0,0,.8);
+        .contenedor-titulo{
+            display: flex;
+            justify-content: center;
+            h3{
+                padding: 40px;
+                margin: 30px;
+                color: #ffffff;
+                font-size: 90px;
+                position: relative;
+                top:-700px;
+                box-shadow: 20px 20px 20px 20px rgba(0,0,0,.8);
+            }
         }
         .Promos{
             width: 100%;
@@ -126,7 +119,7 @@ body{
             justify-content: center;
             margin-bottom: 20px;
             position: relative;
-            top: -70px;
+            top: -280px;
             .producto{
                 background-color: white;
                 width: 25%;
