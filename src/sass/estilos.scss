@@ -122,7 +122,7 @@ body{
             top: -280px;
             .producto{
                 background-color: white;
-                width: 25%;
+                width: 20%;
                 box-shadow: 5px 5px 5px 5px rgba(0,0,0,.6);
                 padding-bottom: 20px;
                 margin-left: 10px;
@@ -345,39 +345,45 @@ body{
                 width: 600px;
             }
         }
-        .nombre{
-            font-size: 50px;
-        }
-        .agregar-carrito{
-            .cantidad{
-                cursor: pointer;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                .count{
-                    padding: 5px;
-                    color: black;
-                    background-color: white;
-                    border-radius: 5px;
-                }
-                div{
-                    margin: 10px;
-                }
-            }
-            .boton-agregar-carrito{
-                width: 200px;
-                background-color: rgb(104, 33, 33);
-                border-radius: 10px;
-                cursor: pointer;
-                &:hover{
-                    background-color: rgb(156, 54, 54);
-                }
-            }
-        }
+        
         .contenedor-datos{
             text-align: center;
             div{
                 margin-top: 10px;
+            }
+            
+            .nombre{
+                font-size: 50px;
+            }
+            .agregar-carrito{
+                .cantidad{
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    .count{
+                        padding: 5px;
+                        color: black;
+                        background-color: white;
+                        border-radius: 5px;
+                    }
+                    div{
+                        margin: 10px;
+                    }
+                }
+                .contenedor-agregar-carrito{
+                    display: flex;
+                    justify-content: center;
+                    .boton-agregar-carrito{
+                        width: 200px;
+                        background-color: rgb(104, 33, 33);
+                        border-radius: 10px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgb(156, 54, 54);
+                        }
+                    }
+                }
             }
         }
     }

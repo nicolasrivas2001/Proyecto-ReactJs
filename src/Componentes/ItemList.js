@@ -1,12 +1,12 @@
 import { collection, getDocs } from "firebase/firestore"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
 import { Link } from "react-router-dom"
 import db from "../services/firebase"
 import { BotonDetail } from "./BotonDetail"
 import {CartContext} from "./Context" 
 
 
-export const ItemListCategoria=(props)=>{
+export const ItemList=(props)=>{
     const {ItemsPiezas,setItemsPiezas}=useContext(CartContext)
     const getData=async()=>{
         try {
@@ -37,7 +37,7 @@ export const ItemListCategoria=(props)=>{
                         <img src={i.imagen}></img>
                     </div>
                     <div className="nombre"><p>{i.nombre}</p></div>
-                    <div className="piezas"><p>5 piezas</p></div>
+                    {i.cantidad>0?<div className="piezas"><p>{i.cantidad+" piezas"}</p></div>:<div></div>}
                     <div className="precio"><p>{`$`+i.precio}</p></div>
                     
                     <Link to="/detalle">

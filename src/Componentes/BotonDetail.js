@@ -4,7 +4,7 @@ import { CartContext } from "./Context";
 
 export const BotonDetail=(props)=>{
     console.log(props.item.nombre)
-    const {setDetailImagen,setDetailNombre,setDetailPrecio,enviarAdetail}=useContext(CartContext);
+    const {setDetailImagen,setDetailNombre,setDetailPrecio}=useContext(CartContext);
     
 
     const datosDetail=()=>{

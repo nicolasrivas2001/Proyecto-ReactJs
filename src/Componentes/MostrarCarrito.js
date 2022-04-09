@@ -16,14 +16,6 @@ export const MostrarCarrito=()=>{
             {cartItems.length===0?
             (<p>Carrito Vacio</p>):
             (cartItems.map((i)=>{
-                const Incrementar=(count)=>{
-                    return(count+1)
-                }
-                const Decrementar=(count)=>{
-                    if (count>0){
-                        return(count-1)
-                    }
-                }
                 return(
                     <div className="item-carrito">
                         <img className="img" src={i.imagen}></img>
@@ -33,11 +25,6 @@ export const MostrarCarrito=()=>{
                         </div>
                         <div className="cantidad"><p>{i.cantidad}</p></div>
                         <Borrar item={i}></Borrar>
-                        <div>
-                            {/* <div onClick={()=>Incrementar(i[3])}>+</div>
-                            <div>{count}</div>
-                            <div onClick={()=>Decrementar(i[3])}>-</div> */}
-                        </div>
                     </div>
                 );
             }

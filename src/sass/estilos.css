@@ -182,7 +182,7 @@ body .ContenedorPromos .Promos {
 
 body .ContenedorPromos .Promos .producto {
   background-color: white;
-  width: 25%;
+  width: 20%;
   -webkit-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
           box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
   padding-bottom: 20px;
@@ -491,11 +491,19 @@ body .Footer div ul li {
   width: 600px;
 }
 
-.contenedor-detalle .detalle .nombre {
+.contenedor-detalle .detalle .contenedor-datos {
+  text-align: center;
+}
+
+.contenedor-detalle .detalle .contenedor-datos div {
+  margin-top: 10px;
+}
+
+.contenedor-detalle .detalle .contenedor-datos .nombre {
   font-size: 50px;
 }
 
-.contenedor-detalle .detalle .agregar-carrito .cantidad {
+.contenedor-detalle .detalle .contenedor-datos .agregar-carrito .cantidad {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,34 +517,35 @@ body .Footer div ul li {
           justify-content: center;
 }
 
-.contenedor-detalle .detalle .agregar-carrito .cantidad .count {
+.contenedor-detalle .detalle .contenedor-datos .agregar-carrito .cantidad .count {
   padding: 5px;
   color: black;
   background-color: white;
   border-radius: 5px;
 }
 
-.contenedor-detalle .detalle .agregar-carrito .cantidad div {
+.contenedor-detalle .detalle .contenedor-datos .agregar-carrito .cantidad div {
   margin: 10px;
 }
 
-.contenedor-detalle .detalle .agregar-carrito .boton-agregar-carrito {
+.contenedor-detalle .detalle .contenedor-datos .agregar-carrito .contenedor-agregar-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-detalle .detalle .contenedor-datos .agregar-carrito .contenedor-agregar-carrito .boton-agregar-carrito {
   width: 200px;
   background-color: #682121;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.contenedor-detalle .detalle .agregar-carrito .boton-agregar-carrito:hover {
+.contenedor-detalle .detalle .contenedor-datos .agregar-carrito .contenedor-agregar-carrito .boton-agregar-carrito:hover {
   background-color: #9c3636;
-}
-
-.contenedor-detalle .detalle .contenedor-datos {
-  text-align: center;
-}
-
-.contenedor-detalle .detalle .contenedor-datos div {
-  margin-top: 10px;
 }
 
 .offcanvas-body .item-carrito {

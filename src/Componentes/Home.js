@@ -1,5 +1,5 @@
 import Fondo from "../Imagenes/fondo-home.webp";
-import { ItemListCategoria } from "./ItemListPiezas";
+import { ItemList } from "./ItemList";
 
 
 export const Home=()=>{
@@ -11,7 +11,7 @@ export const Home=()=>{
         <div className="contenedor-titulo">
             <h3>Our Destacados</h3>
         </div>
-        <ItemListCategoria categoria="destacados"></ItemListCategoria>
+        <ItemList categoria="destacados"></ItemList>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import FondoPiezas from "../Imagenes/fondo-piezas.webp"
-import { ItemListCategoria } from "./ItemListPiezas"
+import { ItemList } from "./ItemList"
 export const Piezas=()=>{
     return(
         <div className="ContenedorPromos">
@@ -9,7 +9,7 @@ export const Piezas=()=>{
         <div className="contenedor-titulo">
             <h3>Nuestras piezas</h3>
         </div>
-        <ItemListCategoria categoria="piezas"></ItemListCategoria>
+        <ItemList categoria="piezas"></ItemList>
         </div>
     )
 }
