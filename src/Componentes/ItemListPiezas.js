@@ -7,7 +7,7 @@ import {CartContext} from "./Context"
 
 
 export const ItemListCategoria=(props)=>{
-    const {ItemsPiezas,setItemsPiezas,enviarAdetail,setDetailNombre,setDetailImagen,setDetailPrecio}=useContext(CartContext)
+    const {ItemsPiezas,setItemsPiezas}=useContext(CartContext)
     const getData=async()=>{
         try {
             const ItemsCollection=collection(db,"Items")
@@ -37,6 +37,7 @@ export const ItemListCategoria=(props)=>{
                         <img src={i.imagen}></img>
                     </div>
                     <div className="nombre"><p>{i.nombre}</p></div>
+                    <div className="piezas"><p>5 piezas</p></div>
                     <div className="precio"><p>{`$`+i.precio}</p></div>
                     
                     <Link to="/detalle">

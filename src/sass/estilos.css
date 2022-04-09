@@ -222,6 +222,10 @@ body .ContenedorPromos .Promos .producto .nombre {
   font-size: 30px;
 }
 
+body .ContenedorPromos .Promos .producto .piezas {
+  font-size: 25px;
+}
+
 body .ContenedorPromos .Promos .producto .precio {
   font-family: 'Nunito Sans', sans-serif;
   width: 100%;
