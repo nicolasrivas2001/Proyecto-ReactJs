@@ -106,9 +106,9 @@ body{
                 padding: 40px;
                 margin: 30px;
                 color: #ffffff;
-                font-size: 90px;
+                font-size: 800%;
                 position: relative;
-                top:-700px;
+                top:-750px;
                 box-shadow: 20px 20px 20px 20px rgba(0,0,0,.8);
             }
         }
@@ -158,7 +158,7 @@ body{
                     display: flex;
                     justify-content: center;
                     .ver-mas{
-                        font: 20px;
+                        font-size: 20px;
                         border-radius: 10px;
                         width: 50%;
                         color: white;
@@ -169,10 +169,15 @@ body{
                     .cantidad{
                         font-size: 20px;
                     }
-                    .boton-agregar-carrito{
-                        font-size: 18px;
-                        &:hover{
-                            background-color: rgb(175, 68, 68);
+                    .contenedor-agregar-carrito{
+                        display: flex;
+                        justify-content: flex-end;
+                        .boton-agregar-carrito{
+                            text-align: center;
+                            font-size: 18px;
+                            &:hover{
+                                background-color: rgb(175, 68, 68);
+                            }
                         }
                     }
                 }
@@ -295,6 +300,16 @@ body{
         color: white;
         display: flex;
         justify-content: space-around;
+        h3{
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        h2{
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+        }
         div{
             padding: 30px 0px;
             text-align: center;

@@ -156,9 +156,9 @@ body .ContenedorPromos .contenedor-titulo h3 {
   padding: 40px;
   margin: 30px;
   color: #ffffff;
-  font-size: 90px;
+  font-size: 800%;
   position: relative;
-  top: -700px;
+  top: -750px;
   -webkit-box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.8);
           box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.8);
 }
@@ -244,7 +244,7 @@ body .ContenedorPromos .Promos .producto .contenedor-ver-mas {
 }
 
 body .ContenedorPromos .Promos .producto .contenedor-ver-mas .ver-mas {
-  font: 20px;
+  font-size: 20px;
   border-radius: 10px;
   width: 50%;
   color: white;
@@ -255,11 +255,21 @@ body .ContenedorPromos .Promos .producto .agregar-carrito .cantidad {
   font-size: 20px;
 }
 
-body .ContenedorPromos .Promos .producto .agregar-carrito .boton-agregar-carrito {
+body .ContenedorPromos .Promos .producto .agregar-carrito .contenedor-agregar-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .ContenedorPromos .Promos .producto .agregar-carrito .contenedor-agregar-carrito .boton-agregar-carrito {
+  text-align: center;
   font-size: 18px;
 }
 
-body .ContenedorPromos .Promos .producto .agregar-carrito .boton-agregar-carrito:hover {
+body .ContenedorPromos .Promos .producto .agregar-carrito .contenedor-agregar-carrito .boton-agregar-carrito:hover {
   background-color: #af4444;
 }
 
@@ -422,6 +432,19 @@ body .Footer {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+body .Footer h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+body .Footer h2 {
+  font-size: 40px;
+}
+
+body .Footer p {
+  font-size: 20px;
 }
 
 body .Footer div {

@@ -16,8 +16,8 @@ export const ItemList=()=>{
                     </div>
                     <div className="nombre"><p>{i.nombre}</p></div>
                     <div className="precio"><p>{`$`+i.precio}</p></div>
-                    <Link to="/detalle"><div className="contenedor-ver-mas">
-                    {/* <div className="ver-mas" onClick={enviarAdetail(i.imagen,i.nombre,i.precio)}>Ver más</div> */}
+                    <Link to="/detalle"><div>
+                    {/* <div className="ver-mas" onClick={enviarAdetail(i.imagen,i.nombre,i.precio)}>Ver más</div>  */}
                         <BotonDetail item={i}></BotonDetail>
                         </div></Link>
                 </div>

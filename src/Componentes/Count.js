@@ -22,7 +22,7 @@ export const Count=(props)=>{
                 <div className="count">{count}</div>
                 <div onClick={()=>Incrementar(count)}>+</div>
             </div>
-            <div>
+            <div className="contenedor-agregar-carrito">
                 <div className="boton-agregar-carrito" onClick={()=>addItem(count,{imagen:props.imagen,nombre:props.nombre,precio:props.precio,cantidad:count},precio*count)}>Agregar al Carrito</div>
             </div>
         </div>

@@ -43,7 +43,9 @@ export const ItemListCategoria=(props)=>{
                         {/* <div className="contenedor-ver-mas">
                             <div className="ver-mas" onClick={datosDetail(i.imagen,i.nombre,i.precio)}>Verr más</div>
                         </div> */}
+                        <div className="contenedor-ver-mas">
                         <BotonDetail item={i}></BotonDetail>
+                        </div>
                     </Link>
                     
                 </div>
