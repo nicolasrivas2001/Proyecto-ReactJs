@@ -56,10 +56,12 @@ body header ul {
 
 body header ul a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 22px;
   list-style: none;
   margin-left: 40px;
   color: black;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body header ul a:hover {
@@ -70,6 +72,8 @@ body header ul li {
   list-style: none;
   margin-right: 25px;
   cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body header ul li:hover {
@@ -125,10 +129,12 @@ body .fondo-home {
 }
 
 body .ContenedorPromos {
-  background-color: black;
+  background-color: white;
 }
 
 body .ContenedorPromos .contenedor-fondo {
+  background-color: black;
+  padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,22 +183,24 @@ body .ContenedorPromos .Promos {
           justify-content: center;
   margin-bottom: 20px;
   position: relative;
-  top: -280px;
+  top: -420px;
 }
 
 body .ContenedorPromos .Promos .producto {
   background-color: white;
   width: 20%;
-  -webkit-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
-          box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
   padding-bottom: 20px;
   margin-left: 10px;
-  border-radius: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body .ContenedorPromos .Promos .producto:hover {
-  -webkit-box-shadow: 3px 3px 5px #7a7a7a;
-          box-shadow: 3px 3px 5px #7a7a7a;
+  -webkit-box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 body .ContenedorPromos .Promos .producto div {
@@ -206,7 +214,7 @@ body .ContenedorPromos .Promos .producto div {
 
 body .ContenedorPromos .Promos .producto div img {
   width: 90%;
-  margin: 10px;
+  margin: 20px;
   border-radius: 10px;
 }
 
@@ -253,6 +261,12 @@ body .ContenedorPromos .Promos .producto .contenedor-ver-mas .ver-mas {
   width: 50%;
   color: white;
   background-color: #771c2e;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+body .ContenedorPromos .Promos .producto .contenedor-ver-mas .ver-mas:hover {
+  background-color: #9e2e44;
 }
 
 body .ContenedorPromos .Promos .producto .agregar-carrito .cantidad {
@@ -271,6 +285,8 @@ body .ContenedorPromos .Promos .producto .agregar-carrito .contenedor-agregar-ca
 body .ContenedorPromos .Promos .producto .agregar-carrito .contenedor-agregar-carrito .boton-agregar-carrito {
   text-align: center;
   font-size: 18px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body .ContenedorPromos .Promos .producto .agregar-carrito .contenedor-agregar-carrito .boton-agregar-carrito:hover {
@@ -291,6 +307,8 @@ body .ContenedorPromos .Promos .producto #agregaralcarrito {
   border-radius: 30px;
   background-color: #701f1f;
   cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body .ContenedorPromos .Promos .producto #agregaralcarrito:hover {
@@ -318,6 +336,8 @@ body .conteinter-destacados .producto {
   padding-bottom: 20px;
   margin-left: 10px;
   border-radius: 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body .conteinter-destacados .producto:hover {
@@ -366,6 +386,8 @@ body .conteinter-destacados .producto #agregaralcarrito {
   border-radius: 30px;
   background-color: #701f1f;
   cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body .conteinter-destacados .producto #agregaralcarrito:hover {
@@ -382,7 +404,7 @@ body .lista-carrito div div img {
 
 body .numero-carrito {
   position: absolute;
-  top: 7%;
+  top: 5%;
   right: 0%;
   width: 20px;
   background-color: white;
@@ -436,15 +458,31 @@ body .Footer {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 40px;
+  -webkit-box-shadow: 20px 10px 10px 10px rgba(255, 255, 255, 0.445);
+          box-shadow: 20px 10px 10px 10px rgba(255, 255, 255, 0.445);
 }
 
 body .Footer h3 {
   font-size: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-body .Footer h2 {
-  font-size: 40px;
+body .Footer .contenedor-sushi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10%;
+}
+
+body .Footer .contenedor-sushi img {
+  width: 100%;
+  border-radius: 100%;
 }
 
 body .Footer p {
@@ -462,7 +500,8 @@ body .Footer div ul li {
 }
 
 .contenedor-detalle {
-  background-color: black;
+  min-height: 800px;
+  background-color: white;
   padding: 160px;
   width: 100%;
   display: -webkit-box;
@@ -474,9 +513,14 @@ body .Footer div ul li {
 }
 
 .contenedor-detalle .detalle {
+  border-radius: 20px;
+  padding: 100px 50px;
+  -webkit-box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.2);
+  background-color: black;
   font-size: 20px;
   color: white;
-  width: 70%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -542,6 +586,8 @@ body .Footer div ul li {
   background-color: #682121;
   border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .contenedor-detalle .detalle .contenedor-datos .agregar-carrito .contenedor-agregar-carrito .boton-agregar-carrito:hover {
@@ -640,6 +686,8 @@ body .Footer div ul li {
   color: white;
   text-align: center;
   padding: 3px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .offcanvas-body .finalizar-compra p:hover {

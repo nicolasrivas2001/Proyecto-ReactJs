@@ -7,13 +7,13 @@ import {CartContext} from "./Context"
 
 
 export const ItemList=(props)=>{
-    const {ItemsPiezas,setItemsPiezas}=useContext(CartContext)
+    const {Items,setItems}=useContext(CartContext)
     const getData=async()=>{
         try {
             const ItemsCollection=collection(db,"Items")
             const col=await getDocs(ItemsCollection)
             const result=col.docs.map((doc)=>doc={id:doc.id, ...doc.data()})
-            setItemsPiezas(result.filter(e=>e.categoria===props.categoria))
+            setItems(result.filter(e=>e.categoria===props.categoria))
             console.log(result)
         } catch (error) {
             console.warn("error",error)
@@ -27,8 +27,8 @@ export const ItemList=(props)=>{
     
 
     return(
-        ItemsPiezas.length>0?
-        ItemsPiezas.map((i)=>{
+        Items.length>0?
+        Items.map((i)=>{
         return(
             
                 <div className="Promos">
@@ -39,13 +39,9 @@ export const ItemList=(props)=>{
                     <div className="nombre"><p>{i.nombre}</p></div>
                     {i.cantidad>0?<div className="piezas"><p>{i.cantidad+" piezas"}</p></div>:<div></div>}
                     <div className="precio"><p>{`$`+i.precio}</p></div>
-                    
                     <Link to="/detalle">
-                        {/* <div className="contenedor-ver-mas">
-                            <div className="ver-mas" onClick={datosDetail(i.imagen,i.nombre,i.precio)}>Verr más</div>
-                        </div> */}
                         <div className="contenedor-ver-mas">
-                        <BotonDetail item={i}></BotonDetail>
+                            <BotonDetail item={i}></BotonDetail>
                         </div>
                     </Link>
                     

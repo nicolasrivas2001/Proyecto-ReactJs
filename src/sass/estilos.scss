@@ -32,13 +32,14 @@ body{
             align-items: center;
             a{
                 text-decoration: none;
-                font-size: 25px;
+                font-size: 22px;
                 list-style: none;
                 margin-left: 40px;
                 color: black;
                 &:hover{
                     color: brown;
                 }
+                transition: 0.3s ease;
             }
             li{
                 list-style: none;
@@ -47,6 +48,7 @@ body{
                 &:hover{
                     color: brown;
                 }
+                transition: 0.3s ease;
             }
         }
         .contenedor-carrito{
@@ -89,8 +91,10 @@ body{
         width: 100%;
     }
     .ContenedorPromos{
-        background-color: black;
+        background-color: white;
         .contenedor-fondo{
+            background-color: black;
+            padding-bottom: 50px;
             display: flex;
             justify-content: center;
             .fondo-promo{
@@ -119,23 +123,25 @@ body{
             justify-content: center;
             margin-bottom: 20px;
             position: relative;
-            top: -280px;
+            top: -420px;
             .producto{
                 background-color: white;
                 width: 20%;
-                box-shadow: 5px 5px 5px 5px rgba(0,0,0,.6);
+                box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1sss);
                 padding-bottom: 20px;
                 margin-left: 10px;
-                border-radius: 10px;
+                
+                margin-bottom: 10px;
                 &:hover{
-                    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+                    box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.1);
                 }
+                transition: 0.3s ease;
                 div{
                     display: flex;
                     justify-content: center;
                     img{
                         width: 90%;
-                        margin: 10px;
+                        margin: 20px;
                         border-radius: 10px;
                     }
                     
@@ -166,6 +172,10 @@ body{
                         width: 50%;
                         color: white;
                         background-color: rgb(119, 28, 46);
+                        &:hover{
+                            background-color: rgb(158, 46, 68);
+                        }
+                        transition: 0.3s ease;
                     }
                 }
                 .agregar-carrito{
@@ -181,6 +191,7 @@ body{
                             &:hover{
                                 background-color: rgb(175, 68, 68);
                             }
+                            transition: 0.3s ease;
                         }
                     }
                 }
@@ -197,6 +208,7 @@ body{
                     &:hover{
                         background-color: rgb(175, 68, 68);
                     }
+                    transition: 0.3s ease;
                 }
             }
         }
@@ -217,6 +229,7 @@ body{
                 &:hover{
                     box-shadow: 3px 3px 5px rgb(122, 122, 122);
                 }
+                transition: 0.3s ease;
             div{
                 display: flex;
                 justify-content: center;
@@ -247,6 +260,7 @@ body{
                 &:hover{
                     background-color: rgb(175, 68, 68);
                 }
+                transition: 0.3s ease;
             }
         }
     }
@@ -262,7 +276,7 @@ body{
     }
     .numero-carrito{
         position: absolute;
-        top:7%;
+        top:5%;
         right: 0%;
         width: 20px;
         background-color: white;
@@ -303,12 +317,21 @@ body{
         color: white;
         display: flex;
         justify-content: space-around;
+        padding: 40px;
+        box-shadow: 20px 10px 10px 10px rgba(255, 255, 255, 0.445);
         h3{
             font-size: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
-        h2{
-            font-size: 40px;
+        .contenedor-sushi{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            width: 10%;
+            img{
+                width: 100%;
+                border-radius: 100%;
+            }
         }
         p{
             font-size: 20px;
@@ -327,15 +350,20 @@ body{
     
 }
 .contenedor-detalle{
-    background-color: black;
+    min-height: 800px;
+    background-color: white;
     padding: 160px;
     width: 100%;
     display: flex;
     justify-content: center;
     .detalle{
+        border-radius: 20px;
+        padding: 100px 50px;
+        box-shadow: 10px 10px 3px rgba(0,0,0,.2);
+        background-color: black;
         font-size: 20px;
         color: white;
-        width: 70%;
+        width: 100%;
         display: flex;
         justify-content: center;
         .imagen{
@@ -382,6 +410,7 @@ body{
                         &:hover{
                             background-color: rgb(156, 54, 54);
                         }
+                        transition: 0.3s ease;
                     }
                 }
             }
@@ -460,6 +489,7 @@ body{
             &:hover{
                 background-color: rgb(175, 68, 68);
             }
+            transition: 0.3s ease;
         }
     }   
 }

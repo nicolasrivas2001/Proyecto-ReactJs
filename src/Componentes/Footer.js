@@ -1,8 +1,11 @@
+import ImgLogo from "../Imagenes/img-carrito-nuevo.webp"
 
 export const Footer=()=>{
     return(
         <div className="Footer">
-        <div><h2>Sushi</h2></div>
+        <div className="contenedor-sushi">
+            <img src={ImgLogo}></img>
+        </div>
         <div>
             <ul>
                 <h3>Menú</h3>
