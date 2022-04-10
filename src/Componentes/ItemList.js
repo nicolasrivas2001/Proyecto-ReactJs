@@ -37,8 +37,11 @@ export const ItemList=(props)=>{
                         <img src={i.imagen}></img>
                     </div>
                     <div className="nombre"><p>{i.nombre}</p></div>
+                    <div className="descripcion"><p>{i.descripcion}</p></div>
                     {i.cantidad>0?<div className="piezas"><p>{i.cantidad+" piezas"}</p></div>:<div></div>}
-                    <div className="precio"><p>{`$`+i.precio}</p></div>
+                    <div className="contenedor-precio">
+                        <div className="precio"><p>{`$`+i.precio}</p></div>
+                    </div>
                     <Link to="/detalle">
                         <div className="contenedor-ver-mas">
                             <BotonDetail item={i}></BotonDetail>

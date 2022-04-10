@@ -3,8 +3,7 @@ import { CartContext } from "./Context";
 import { Count } from "./Count"
 
 export const ItemDetail=()=>{
-    const {detailImagen,detailNombre,detailPrecio,elemDetail}=useContext(CartContext);
-    console.log(elemDetail)
+    const {detailImagen,detailNombre,detailPrecio,detailDescripcion}=useContext(CartContext);
     return(
             <div className="contenedor-detalle">
                 <div className="detalle">
@@ -13,7 +12,9 @@ export const ItemDetail=()=>{
                 </div>
                 <div className="contenedor-datos">
                 <div className="nombre">{detailNombre}</div>
-
+                <div className="contenedor-descripcion">
+                    <div className="descripcion">{detailDescripcion}</div>
+                </div>
                 <div className="precio"><p>{`$`+detailPrecio}</p></div>
                 <Count imagen={detailImagen} nombre={detailNombre} precio={detailPrecio}></Count>
                 </div>

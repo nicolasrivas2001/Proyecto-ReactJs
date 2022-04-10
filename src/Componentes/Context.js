@@ -12,12 +12,14 @@ export const CartProvider=({children})=>{
     const [detailImagen,setDetailImagen]=useState("");
     const [detailNombre,setDetailNombre]=useState("");
     const [detailPrecio,setDetailPrecio]=useState("");
+    const [detailDescripcion,setDetailDescripcion]=useState("");
 
 
-    const enviarAdetail=(imagen,nombre,precio)=>{
+    const enviarAdetail=(imagen,nombre,precio,descripcion)=>{
         setDetailImagen(imagen);
         setDetailNombre(nombre);
         setDetailPrecio(precio);
+        setDetailDescripcion(descripcion);
     }
 
     const addItem=(amount,item,precio)=>{
@@ -49,6 +51,6 @@ export const CartProvider=({children})=>{
     
 
     return(
-        <CartContext.Provider value={{setProdFilt,prodFilt,cartCount,setCount,cartItems,setCartItems,addItem,total,setTotal,setItems,Items,setDetailImagen,setDetailNombre,setDetailPrecio,enviarAdetail,detailImagen,detailNombre,detailPrecio,eliminarItem}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{setProdFilt,prodFilt,cartCount,setCount,cartItems,setCartItems,addItem,total,setTotal,setItems,Items,setDetailImagen,setDetailNombre,setDetailPrecio,enviarAdetail,detailImagen,detailNombre,detailPrecio,eliminarItem,setDetailDescripcion,detailDescripcion}}>{children}</CartContext.Provider>
     )
 }

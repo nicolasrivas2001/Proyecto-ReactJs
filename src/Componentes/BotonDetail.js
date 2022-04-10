@@ -4,16 +4,18 @@ import { CartContext } from "./Context";
 
 export const BotonDetail=(props)=>{
     console.log(props.item.nombre)
-    const {setDetailImagen,setDetailNombre,setDetailPrecio}=useContext(CartContext);
+    const {setDetailImagen,setDetailNombre,setDetailPrecio,setDetailDescripcion}=useContext(CartContext);
     
 
     const datosDetail=()=>{
         const imagen=props.item.imagen;
         const nombre=props.item.nombre;
         const precio=props.item.precio;
+        const descripcion=props.item.descripcion;
         setDetailImagen(imagen);
         setDetailNombre(nombre);
         setDetailPrecio(precio);
+        setDetailDescripcion(descripcion);
     }
 
     return(
