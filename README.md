@@ -8,8 +8,7 @@ Una vez seleccionados los productos y sus cantidades, podemos acceder al carrito
 Finalmente, accederemos a un formulario donde ingresaremos nuestros datos, incluyendo la dirección a donde se desea que el pedido sea entregado.
 
 Visualización de compra real:
-
-<video src="./src/Imagenes/React App - Google Chrome 2022-04-26 22-41-29 (1).gif"></video>
+![React App - Google Chrome 2022-04-26 22-41-29 (1)](https://user-images.githubusercontent.com/93351367/165426118-f15ed814-68b6-4495-86b2-7ae1b6efcb37.gif)
 
 Instalacion:
 
