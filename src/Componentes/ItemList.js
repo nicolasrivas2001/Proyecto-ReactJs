@@ -1,59 +1,29 @@
 import { collection, getDocs } from "firebase/firestore"
 import { useContext, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import db from "../services/firebase"
-import { BotonDetail } from "./BotonDetail"
+
 import {CartContext} from "./Context" 
+import { Item } from "./Item"
 
 
 export const ItemList=(props)=>{
-    const {Items,setItems}=useContext(CartContext)
-    const getData=async()=>{
-        try {
-            const ItemsCollection=collection(db,"Items")
-            const col=await getDocs(ItemsCollection)
-            const result=col.docs.map((doc)=>doc={id:doc.id, ...doc.data()})
-            setItems(result.filter(e=>e.categoria===props.categoria))
-            console.log(result)
-        } catch (error) {
-            console.warn("error",error)
-        }
-    }
-
-    useEffect(()=>{
-        getData();
-    },[])
-
-    
-
     return(
-        Items.length>0?
-        Items.map((i)=>{
-        return(
-            
-                <div className="Promos">
-                <div className="producto">
-                    <div>
-                        <img src={i.imagen}></img>
-                    </div>
-                    <div className="nombre"><p>{i.nombre}</p></div>
-                    <div className="descripcion"><p>{i.descripcion}</p></div>
-                    {i.cantidad>0?<div className="piezas"><p>{i.cantidad+" piezas"}</p></div>:<div></div>}
-                    <div className="contenedor-precio">
-                        <div className="precio"><p>{`$`+i.precio}</p></div>
-                    </div>
-                    <Link to="/detalle">
-                        <div className="contenedor-ver-mas">
-                            <BotonDetail item={i}></BotonDetail>
-                        </div>
-                    </Link>
-                    
+        <div className="producto">
+            <div>
+                <img src={props.datos.imagen}></img>
+            </div>
+            <div className="nombre"><p>{props.datos.nombre}</p></div>
+            <div className="descripcion"><p>{props.datos.descripcion}</p></div>
+            {props.datos.cantidad>0?<div className="piezas"><p>{props.datos.cantidad+" piezas"}</p></div>:<div></div>}
+            <div className="contenedor-precio">
+                <div className="precio"><p>{`$`+props.datos.precio}</p></div>
+            </div>
+            <Link to={`/item/${props.datos.nombre}`}>
+                <div className="contenedor-ver-mas">
+                    <Item item={props.datos}></Item>
                 </div>
-                </div>
-        )
-    })
-    :
-    <p>Cargando...</p>
+            </Link>      
+        </div>
     )
-    
 }

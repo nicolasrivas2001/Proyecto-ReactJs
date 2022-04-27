@@ -7,8 +7,12 @@ export const Total=()=>{
     return(
         <div className="contenedor-total">
             <hr></hr>
-            <div className="total"><p>Total:</p> <p>$ {total}</p></div>
-            <div className="pagar"><Link to="/formulario"><p>Ir a pagar</p></Link></div>
+            <div className="total">
+                <p>Total:</p> <p>$ {total}</p>
+            </div>
+            <div className="pagar">
+                <Link to="/formulario"><p>Ir a pagar</p></Link>
+            </div>
         </div>
         
     )

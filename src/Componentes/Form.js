@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { CartContext } from "./Context";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import db from "../services/firebase";
-import { async } from "@firebase/util";
 
 
 
@@ -68,14 +67,11 @@ export const Form=()=>{
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input type="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
-                        {/* <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> */}
                     </div>
-                    
-                    
                     <div className="contenedor-submit">
-                    <button  type="submit" class="btn btn-primary">Finalizar Compra</button>
+                        <button  type="submit" class="btn btn-primary">Finalizar Compra</button>
                     </div>
-        </form>
+            </form>
         </div>
     )
 }

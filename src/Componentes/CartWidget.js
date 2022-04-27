@@ -4,8 +4,7 @@ import { MostrarCarrito } from "./MostrarCarrito";
 export const CartWidget = ()=>{
     return(
         <div class="contenedor-carrito">
-            <button /*class="btn btn-primary"*/class="btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src={Carrito}></img></button>
-
+            <button class="btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src={Carrito}></img></button>
 
             <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
               <div class="offcanvas-header">

@@ -1,11 +1,9 @@
+import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { CartContext } from "./Context";
 
-
-export const BotonDetail=(props)=>{
-    console.log(props.item.nombre)
+export const Item=(props)=>{
     const {setDetailImagen,setDetailNombre,setDetailPrecio,setDetailDescripcion}=useContext(CartContext);
-    
 
     const datosDetail=()=>{
         const imagen=props.item.imagen;

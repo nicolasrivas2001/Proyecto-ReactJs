@@ -5,12 +5,8 @@ import { Total } from "./Total"
 
 
 export const MostrarCarrito=()=>{
-    // const eliminarItem=(item)=>{
-    // const CartItemActualizado=cartItems.filter(e=>e.nombre!==item)
-    // setCartItems(CartItemActualizado)
-    // }
-    const {cartItems,setCartItems}=useContext(CartContext)
-    // const eliminar=(item)=>cartItems.filter(product=>product.id !== item.id)
+    const {cartItems}=useContext(CartContext)
+
     return(
         <div className="carrito-dropdown">
             {cartItems.length===0?

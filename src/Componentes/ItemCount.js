@@ -1,8 +1,8 @@
 import { useContext, useState } from "react"
 import {CartContext} from "./Context" 
 
-export const Count=(props)=>{
-    const {addItem,cartItems}=useContext(CartContext);
+export const ItemCount=(props)=>{
+    const {addItem}=useContext(CartContext);
     const [count,setCount]=useState(1);
     const Incrementar=(count)=>{
         setCount(count+1)
@@ -12,7 +12,6 @@ export const Count=(props)=>{
             setCount(count-1)
         }
     }
-
     let precio = parseInt(props.precio);
     
     return(
