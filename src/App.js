@@ -1,12 +1,9 @@
 import './App.css';
 import { NavBar } from './Componentes/NavBar';
-import { Home } from './Componentes/Home';
 import React from 'react';
 import {CartProvider} from "./Componentes/Context";
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import { Piezas } from './Componentes/Piezas';
 import { Form } from './Componentes/Form';
-import { PokeSalads } from './Componentes/PokeSalads';
 import { Footer } from './Componentes/Footer';
 import { Carrito } from './Componentes/Carrito';
 import { ItemListConteiner } from './Componentes/ItemListConteiner';

@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { Borrar } from "./Borrar"
 import { CartContext } from "./Context"
 import { Total } from "./Total"

@@ -3,9 +3,6 @@ import { CartContext } from "./Context";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import db from "../services/firebase";
 
-
-
-
 export const Form=()=>{
     const {cartItems,setcartItems,total,setCount}=useContext(CartContext);
     const sendOrder= async(e)=>{

@@ -1,4 +1,3 @@
-import { ItemList } from "./ItemList"
 import Fondo from "../Imagenes/fondo-promos.webp"
 import { ItemListConteiner } from "./ItemListConteiner"
 

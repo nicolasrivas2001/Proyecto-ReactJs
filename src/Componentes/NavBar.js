@@ -2,7 +2,6 @@ import React from "react"
 import Logo from "../Imagenes/img-carrito-nuevo.webp"
 import {CartWidget} from "./CartWidget.js"
 import { Link } from "react-router-dom"
-import Fondo from "../Imagenes/fondo-home.webp";
 
 export const NavBar=()=>{
     return(

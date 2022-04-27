@@ -1,9 +1,4 @@
-import { collection, getDocs } from "firebase/firestore"
-import { useContext, useEffect } from "react"
-import { Link, useParams } from "react-router-dom"
-import db from "../services/firebase"
-
-import {CartContext} from "./Context" 
+import { Link } from "react-router-dom"
 import { Item } from "./Item"
 
 

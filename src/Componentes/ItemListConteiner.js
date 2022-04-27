@@ -1,11 +1,9 @@
 import { ItemList } from "./ItemList"
 import { collection, getDocs } from "firebase/firestore"
 import { useContext, useEffect } from "react"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import db from "../services/firebase"
 import {CartContext} from "./Context" 
-import { Item } from "./Item"
-import Fondo from "../Imagenes/fondo-home.webp";
 
 
 export const ItemListConteiner=()=>{

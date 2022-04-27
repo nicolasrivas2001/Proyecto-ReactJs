@@ -1,5 +1,4 @@
 import FondoPiezas from "../Imagenes/fondo-piezas.webp"
-import { ItemList } from "./ItemList"
 import { ItemListConteiner } from "./ItemListConteiner"
 export const Piezas=()=>{
     return(
